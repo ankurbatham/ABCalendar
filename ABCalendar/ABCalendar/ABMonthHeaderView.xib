@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ABMonthHeaderView" customModule="ABCalendar" customModuleProvider="target">
+            <connections>
+                <outlet property="monthLabel" destination="XNL-m1-fcP" id="hsY-9I-74P"/>
+                <outlet property="nextButton" destination="Z6x-CH-fC8" id="Mu2-JX-EEu"/>
+                <outlet property="previousButton" destination="Nel-at-vAc" id="teO-DX-Oqh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nel-at-vAc">
+                    <rect key="frame" x="0.0" y="0.0" width="50" height="72"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="s71-Ep-ERR"/>
+                    </constraints>
+                    <state key="normal" image="previous">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onClickPreviousButtonActionWithSender:" destination="-1" eventType="touchUpInside" id="cjj-en-g1L"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6x-CH-fC8">
+                    <rect key="frame" x="325" y="0.0" width="50" height="72"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="HHE-Xq-2Fa"/>
+                    </constraints>
+                    <state key="normal" image="next">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onClickNextButtonActionWithSender:" destination="-1" eventType="touchUpInside" id="Zgn-mJ-NQa"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNL-m1-fcP">
+                    <rect key="frame" x="50" y="10" width="275" height="52"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Nel-at-vAc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="KUl-Hu-glB"/>
+                <constraint firstItem="Z6x-CH-fC8" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="S6v-60-Rhr"/>
+                <constraint firstItem="XNL-m1-fcP" firstAttribute="leading" secondItem="Nel-at-vAc" secondAttribute="trailing" id="TI4-K1-5Yz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Nel-at-vAc" secondAttribute="bottom" id="VC9-Wy-BmZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Z6x-CH-fC8" secondAttribute="bottom" id="Vdd-Px-t8e"/>
+                <constraint firstItem="Z6x-CH-fC8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="We7-IM-ioM"/>
+                <constraint firstItem="Z6x-CH-fC8" firstAttribute="leading" secondItem="XNL-m1-fcP" secondAttribute="trailing" id="Yi8-qh-zKk"/>
+                <constraint firstItem="Nel-at-vAc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="atq-if-paj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="XNL-m1-fcP" secondAttribute="bottom" constant="10" id="l3j-zM-wqJ"/>
+                <constraint firstItem="XNL-m1-fcP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="moH-3w-Nnw"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="34.5" y="152.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="next" width="30" height="30"/>
+        <image name="previous" width="30" height="30"/>
+    </resources>
+</document>
